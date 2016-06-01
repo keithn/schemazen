@@ -107,8 +107,8 @@ namespace SchemaZen.model {
 					case "decimal":
 					case "numeric":
 
-						return string.Format("[{0}] [{1}]({2},{3}) {4} {5}", Name, Type, Precision, Scale, IsNullableText,
-							includeDefaultConstraint ? DefaultText : string.Empty);
+						return string.Format("[{0}] [{1}]({2},{3}) {4} {5} {6}", Name, Type, Precision, Scale, IsNullableText,
+							includeDefaultConstraint ? DefaultText : string.Empty,  IdentityText);
 					default:
 						throw new NotSupportedException("SQL data type " + Type + " is not supported.");
 				}
